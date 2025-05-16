@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  /* border: 1px solid red; */
+  font-family: "myFont";
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(/DMSans-Regular.ttf);
+}
+
+@media screen and (max-width: 768px) {
+}
+
+.navlink {
+  text-decoration: none;
+  font-weight: normal;
+  color: #eeeeee;
+  font-size: 1.15rem;
+  background-color: #031927;
+  transition: background-color 0.3s;
+}
+
+.navlink:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+  color: #031927;
+}
+
+.active {
+  font-weight: "bold";
+  font-style: normal;
+  background-color: #eeeeee;
+  color: #031927;
+}
+
+#welcome-section {
+  background-color: #031927;
+  color: #eeeeee;
+  min-height: 100vh;
+  padding: 6rem 0rem 5rem 0rem;
+}
+
+.place {
+  font-size: 0.8em;
+  color: #444;
+}
+
+.project {
+  font-size: 18px;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+#achievements {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 18px;
+}
+
+#about-me {
+  background-color: #031927;
+  color: #ffffff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 18px;
+}
+
+#education {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 18px;
+}
+
+#getintouch {
+  color: #ffffff;
+  background-color: #031927;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 18px;
+}
+
+.logo-project {
+  width: 150px;
+  height: fit-content;
+}
+
+.gallery-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.gallery {
+  display: flex;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+/* Hide from users but keep in DOM for crawlers */
+.seo-modals {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* Style actual modals for users */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.btn {
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(80%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  color: #212529;
+}
+
+/* h1 {
+  font-size: 2.5rem;
+} */
