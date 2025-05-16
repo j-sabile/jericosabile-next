@@ -33,7 +33,9 @@ export const metadata: Metadata = {
     icon: "/img/favicon64.ico",
     apple: "/img/favicon64.ico",
   },
-  themeColor: "#031927",
+    other: {
+    'google-site-verification': 'lYP3ve-YsFbmxA4OSnghFJWDbX7eI330Kxh8ZAOZBu4',
+  },
 };
 
 export default function RootLayout({
